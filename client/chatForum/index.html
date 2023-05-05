@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sports website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
    <script>
@@ -79,7 +80,7 @@
             </a>
           </li>
           <li>
-            <a href="chatForum/index.html">
+            <a href="#">
               <span class="icon"><i class="fas fa-leaf"></i></span>
               <span class="title">Chat Forum</span>
             </a>
@@ -87,72 +88,27 @@
         </ul>
       </div>
 
+        <section class="chat__section">
+          <div class="brand">
+              <img height="40" src="/wassup.png" alt="">
+              <h1>Chat</h1>
+          </div>
+          <div class="message__area"></div>
+          <div>
+              <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+          </div>
+      </section>
+
+
+      <script type="importmap">
+        {
+          "imports": {
+            "socket.io-client": "https://cdn.socket.io/4.4.1/socket.io.esm.min.js"
+          }
+        }
+      </script>
     
-    <section class="newssports">
-        <div class="sports-news">
-            <h2>Sports News</h2>
-            <div class="sports-news-item">
-                <ul class="newscontainer">
-                    
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="posts-container">
-            <div class="posts-row1">
-                <img src="/img/user.jpg" alt="user">
-                <input type="text" placeholder="Write Here" id="inputCaption">
-            </div>
-            <div class="posts-row2">
-                <h4>EVENTS</h4>
-                <h4>VIDEO</h4>
-                <h4>POSTS</h4>
-                <h4>NEWS</h4>
-            </div>
-            <button onclick="createPost()">New Post</button>
-
-        </div>
-    </section>
-    <!-- new post section starts -->
-    <section class="postcontainer">
-        <div class="new-post-section">
-            <div class="name-user">
-                <img src="/img/user.jpg" alt="">
-                <p> Rolika Agarwal   <br> Basketball Player <br> 300 followers</p>
-            </div>
-            <div class="post-text">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae, ea optio architecto quis dolorem pariatur eveniet fugiat? Dolorem exercitationem placeat quod eius reiciendis provident temporibus harum sit optio aliquam. </p>
-            </div>
-            <div class="post-image">
-                <img src="/img/post1.jpg" alt="">
-            </div>
-            <h5><i class="fa-solid fa-heart"></i>1000 likes</h5>
-            <div class="post-last-row">
-                <h4><i class="fa-solid fa-thumbs-up"></i>Like</h4>
-                <h4><i class="fa-solid fa-comment"></i>Comment</h4>
-                <h4><i class="fa-solid fa-arrow-up-right-from-square"></i>Repost</h4>
-                <h4><i class="fa-solid fa-share"></i>Send</h4>
-            </div>
-        </div>
-       
-
-    </section>
-    <!-- new posts section ends -->
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-   <script src="script.js"></script>
+      <script type="module" src="script.js">
+      </script>
   </body>
 </html>
