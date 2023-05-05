@@ -10,7 +10,6 @@ const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
-app.use();
 app.use(cors());
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
