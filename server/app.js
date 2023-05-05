@@ -10,7 +10,11 @@ const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: 'https://sports-sphere.netlify.app'
+};
+app.use(cors(corsOptions));
+// app.use(cors());
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
   cors: {
