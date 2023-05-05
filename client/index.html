@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sports website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+
+    <div class="wrapper">
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+        </div>
+        <div class="top_menu">
+          <div class="logo">Sports Mania</div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-book"></i></span>
+              <span class="title">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-file-video"></i></span>
+              <span class="title">Events</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+              <span class="title">Sports</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active">
+              <span class="icon"><i class="fas fa-blog"></i></span>
+              <span class="title">Trending</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><i class="fas fa-leaf"></i></span>
+              <span class="title">Live Games</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="main_container">
+        <div class="item">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente
+          adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae
+          aspernatur!
+        </div>
+        <div class="item">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente
+          adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae
+          aspernatur!
+        </div>
+        <div class="item">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente
+          adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae
+          aspernatur!
+        </div>
+        <div class="item">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente
+          adipisci nemo atque eligendi reprehenderit minima blanditiis eum quae
+          aspernatur!
+        </div>
+      </div>
+    </div> -->
+    <section>
+        <div class="sports-news">
+            <h2>Sports News</h2>
+            <div class="sports-news-item">
+                <ul>
+                    <li> <h4><i class="fa-solid fa-circle"></i>Heading 1</h4>
+                        <p>2048 Views</p>
+                    </li>
+                    <li> <h4><i class="fa-solid fa-circle"></i>Heading 2</h4>
+                        <p>this is the news i want to display</p>
+                    </li>
+                    <li> <h4><i class="fa-solid fa-circle"></i>Heading 3</h4>
+                        <p>this is the news i want to display</p>
+                    </li>
+                    <li> <h4><i class="fa-solid fa-circle"></i>Heading 4</h4>
+                        <p>this is the news i want to display</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="posts-container">
+            <div class="posts-row1">
+                <img src="/img/user.jpg" alt="user">
+                <input type="text" placeholder="Write Here">
+            </div>
+            <div class="posts-row2">
+                <h4>EVENTS</h4>
+                <h4>VIDEO</h4>
+                <h4>POSTS</h4>
+                <h4>NEWS</h4>
+            </div>
+
+        </div>
+    </section>
+    <!-- new post section starts -->
+    <section>
+        <div class="new-post-section">
+            <div class="name-user">
+                <img src="/img/user.jpg" alt="">
+                <p>Rolika Agarwal    <br> Basketball Player <br> 300 followers</p>
+            </div>
+            <div class="post-text">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae, ea optio architecto quis dolorem pariatur eveniet fugiat? Dolorem exercitationem placeat quod eius reiciendis provident temporibus harum sit optio aliquam. </p>
+            </div>
+            <div class="post-image">
+                <img src="/img/post1.jpg" alt="">
+            </div>
+            <h5><i class="fa-solid fa-heart"></i>1000 likes</h5>
+            <div class="post-last-row">
+                <h4><i class="fa-solid fa-thumbs-up"></i>Like</h4>
+                <h4><i class="fa-solid fa-comment"></i>Comment</h4>
+                <h4><i class="fa-solid fa-arrow-up-right-from-square"></i>Repost</h4>
+                <h4><i class="fa-solid fa-share"></i>Send</h4>
+            </div>
+        </div>
+
+    </section>
+    <!-- new posts section ends -->
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/b99e675b6e.js">
+        const hamburger = document.querySelector(".hamburger");
+        const wrapper = document.querySelector(".wrapper");
+
+        hamburger.addEventListener("click", function() {
+        wrapper.classList.toggle("collapse");
+     });
+         
+   </script>
+  </body>
+</html>
