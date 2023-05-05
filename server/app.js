@@ -11,11 +11,10 @@ const auth = require("./middleware/auth").auth;
 
 const app = express();
 app.use(cors());
-app.use(cors());
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
   cors: {
-    origin: "*",
+    origin: "https://sports-sphere.netlify.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
