@@ -26,16 +26,18 @@
     
         <div class="right">
             <br><br>
-            <h5>Register</h5>
+            <h5>Verify</h5>
             <br><br><br>
             <p>Have an account? <a href="/login">Log in to Your Account</a> it takes less than a minute</p>
             <div class="inputs">
-                    <input type="text" name="name" placeholder="Full Name" id="fullname">
-                    <input type="text" placeholder="user name" name="username" id="username">
-                    <input type="number" placeholder="Mobile" name="mobile" id="mobile">
-                    <input type="password" placeholder="password" name="password" id="pass">
+                    <input type="text" placeholder="Enter Your Adhaar Number" id="adhaar">
                     <br><br><br>
-                    <button type="submit"  onclick="verify()">Verify Your Identity</button>
+                    <button type="submit" onclick="sendOTP()" class="sendOTP">Send OTP</button>
+
+
+                    <input type="text" placeholder="####" class="otp">
+                    <br><br>
+                    <button type="submit"  onclick="submitOTP()" class="submitOTP" style="display: none;">Submit OTP</button>
             </div>
         </div>
     
