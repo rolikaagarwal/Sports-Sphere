@@ -3,8 +3,7 @@ const model = require("../model/post");
 
 
 exports.getAllPosts = async(req,res)=>{
-  const posts = await model.Post.find({})
-  // .populate("userId");
+  const posts = await model.Post.find({}).populate("userId");
   res.status(200).json(posts);
 }
 
