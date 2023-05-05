@@ -12,6 +12,10 @@ const notify = () =>{
 const cookieValue = localStorage.getItem("cookieName");
 console.log(cookieValue);
 
+// news section 
+
+const newsSection = () => {
+
 
 fetch("https://sports-sphere.vercel.app/posts", {
   method: "GET",
@@ -52,7 +56,7 @@ fetch("https://sports-sphere.vercel.app/posts", {
   .catch((error) => {
     console.error("Error:", error);
   });
-
+}
 // sports news
 
 
@@ -81,5 +85,16 @@ fetch("https://sports-sphere.vercel.app/news", {
   .catch((error) => {
     console.error("Error:", error);
   });
+
+
+
+  // create new post
+
+  const createPost = () => {
+    const inputCaption = document.getElementById("inputCaption").value;
+    console.log(inputCaption)
+
+
+  }
 
 
