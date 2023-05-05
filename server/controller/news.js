@@ -3,7 +3,7 @@ const newsapi = new NewsAPI(process.env.NEWSAPI)
 
 exports.getNews = (req, res) => {
   newsapi.v2.topHeadlines({
-    q: 'cricket',
+    // q: 'cricket',
     category: 'sports',
     country: 'in'
   }).then(response => {
