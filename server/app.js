@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+
 const mongoose = require("mongoose");
 const cors = require("cors");
 const posts = require("./router/post");
@@ -9,10 +10,20 @@ const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
+app.use(cors());
+const http = require('http').createServer(app)
+const io = require('socket.io')(http, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true
+  }
+});
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
 
 mongoose.connect(process.env.MONGODB).then(()=>{
   console.log("DataBase Connected");
@@ -30,6 +41,14 @@ app.get("/",(req,res)=>{
   res.send("Server Running")
 })
 
-app.listen(process.env.PORT||3000,()=>{
+io.on('connection', (socket) => {
+  console.log('Connected...')
+  socket.on('message', (msg) => {
+      socket.broadcast.emit('message', msg)
+  })
+
+})
+
+http.listen(process.env.PORT||3000,()=>{
   console.log("Server Started")
 })
