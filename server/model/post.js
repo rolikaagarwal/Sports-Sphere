@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId, 
-    ref: "users"
+    ref: "User"
   },
   likes: Number,
   caption:String,
