@@ -10,15 +10,12 @@ const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
-const corsOptions = {
-  origin: 'https://sports-sphere.netlify.app'
-};
-app.use(cors(corsOptions));
-// app.use(cors());
+app.use();
+app.use(cors());
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
   cors: {
-    origin: "https://sports-sphere.netlify.app",
+    origin: "*",
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true
