@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   
+   <script>
+    // const cookieValue = localStorage.getItem("cookieName");
+    // if (cookieValue) {
+
+    // }
+
+   </script>
 
     <div class="wrapper">
       <div class="top_navbar">
@@ -19,7 +25,7 @@
           <div class="three"></div>
         </div>
         <div class="top_menu">
-          <div class="logo">Sports Mania</div>
+          <div class="logo">Sports Sphere</div>
           <ul>
             <li>
               <a href="#">
@@ -28,7 +34,7 @@
             </li>
             <li>
               <a href="#">
-                <i class="fas fa-bell"></i>
+                <i class="fas fa-bell" onclick="notify()"></i>
               </a>
             </li>
             <li>
@@ -100,7 +106,7 @@
     <section>
         <div class="posts-container">
             <div class="posts-row1">
-                <img src="/client/img/user.jpg" alt="user">
+                <img src="/img/user.jpg" alt="user">
                 <input type="text" placeholder="Write Here">
             </div>
             <div class="posts-row2">
@@ -113,17 +119,17 @@
         </div>
     </section>
     <!-- new post section starts -->
-    <section>
+    <section class="postcontainer">
         <div class="new-post-section">
             <div class="name-user">
-                <img src="/client/img/user.jpg" alt="">
-                <p>Rolika Agarwal    <br> Basketball Player <br> 300 followers</p>
+                <img src="/img/user.jpg" alt="">
+                <p> Rolika Agarwal   <br> Basketball Player <br> 300 followers</p>
             </div>
             <div class="post-text">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae, ea optio architecto quis dolorem pariatur eveniet fugiat? Dolorem exercitationem placeat quod eius reiciendis provident temporibus harum sit optio aliquam. </p>
             </div>
             <div class="post-image">
-                <img src="/client/img/post1.jpg" alt="">
+                <img src="/img/post1.jpg" alt="">
             </div>
             <h5><i class="fa-solid fa-heart"></i>1000 likes</h5>
             <div class="post-last-row">
@@ -133,6 +139,7 @@
                 <h4><i class="fa-solid fa-share"></i>Send</h4>
             </div>
         </div>
+       
 
     </section>
     <!-- new posts section ends -->
@@ -147,14 +154,6 @@
 
 
 
-    <script src="https://kit.fontawesome.com/b99e675b6e.js">
-        const hamburger = document.querySelector(".hamburger");
-        const wrapper = document.querySelector(".wrapper");
-
-        hamburger.addEventListener("click", function() {
-        wrapper.classList.toggle("collapse");
-     });
-         
-   </script>
+   <script src="script.js"></script>
   </body>
 </html>
