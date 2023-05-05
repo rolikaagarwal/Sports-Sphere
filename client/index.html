@@ -10,11 +10,23 @@
   </head>
   <body>
    <script>
-    // const cookieValue = localStorage.getItem("cookieName");
-    // if (cookieValue) {
-
-    // }
-
+    const cookie = localStorage.getItem("cookieName");
+    console.log(cookie);
+    fetch("https://sports-sphere.vercel.app/auth", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookieValue}`,
+        },
+      })
+        .then((response) => {
+          if(response.status!=200){
+            window.location.href="/login-signup/loginPage";
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
    </script>
 
     <div class="wrapper">
