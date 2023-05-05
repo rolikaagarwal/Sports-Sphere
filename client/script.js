@@ -27,7 +27,7 @@ fetch("https://sports-sphere.vercel.app/posts", {
         document.querySelector(".postcontainer").innerHTML+=`<div class="new-post-section">
         <div class="name-user">
             <img src="/img/user.jpg" alt="">
-            <p> Rolika Agarwal   <br> Basketball Player <br> 300 followers</p>
+            <p> ${post.userId.firstName}  <br> Basketball Player <br> 300 followers</p>
         </div>
         <div class="post-text">
             <p>${post.caption} </p>
@@ -52,3 +52,34 @@ fetch("https://sports-sphere.vercel.app/posts", {
   .catch((error) => {
     console.error("Error:", error);
   });
+
+// sports news
+
+
+fetch("https://sports-sphere.vercel.app/news", {
+  method: "GET",
+  headers: {
+        "Content-Type": "application/json",
+        
+      },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    data.forEach(news=> {
+       document.querySelector(".newscontainer").innerHTML+=`
+       <li> <h4><a href="${news.url}"><i class="fa-solid fa-circle"></i>${news.title}</a></h4>
+        
+        </li>
+       `
+       
+
+    })
+
+    
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+

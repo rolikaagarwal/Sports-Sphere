@@ -165,7 +165,7 @@ body{
 
 /* sports news section starts */
 .sports-news{
-    background-color: #b3bddf;
+    background-color: #ffffff;
     border-radius: 5px;
     /* border: 1px solid #d1d1d1; */
     width: 25%;
@@ -181,7 +181,20 @@ body{
     margin-bottom: 20px;
 }
 .sports-news-item h4{
+  font-weight: 300;
     padding: 5px;
+    letter-spacing: 0.5px;
+
+}
+.sports-news-item ul li{
+  margin: 20px 0;
+}
+
+.sports-news-item h4 a{
+  color: rgb(3, 3, 126);
+}
+.sports-news-item h4 a:hover{
+  text-decoration: underline;
 }
 .sports-news-item i{
     font-size: 6px;
@@ -206,6 +219,8 @@ body{
     margin-top: 100px;
     padding: 20px;
     z-index: 0;
+    box-shadow: 0 3px 7px 1px #0000007a;
+    border-radius: 2px;
 }
 .posts-row1{
     /* background-color: aqua; */
@@ -242,7 +257,18 @@ body{
     padding: 0px 30px;
     width: 90%;
 }
-
+.posts-container button{
+  outline: 0;
+  /* background-color: blue; */
+  background: transparent;
+  padding: 8px;
+  margin-left: 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 0.1px solid black;
+  
+}
 /* upper posts section ends */
 
 
@@ -254,6 +280,8 @@ body{
     margin-left: 250px;
     margin-top: 20px;
     padding: 40px;
+    box-shadow: 0 3px 7px 1px #0000007a;
+    border-radius: 2px;
 }
 .name-user{
     display: flex;
