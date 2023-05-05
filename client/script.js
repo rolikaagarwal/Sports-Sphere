@@ -13,7 +13,7 @@ const notify = () => {
 const cookieValue = localStorage.getItem("cookieName");
 console.log(cookieValue);
 
-// new post
+// get posts
 
 const getPosts = () => {
   
@@ -111,3 +111,7 @@ const createPost = () => {
       console.error("Error:", error);
     });
 };
+
+
+
+
