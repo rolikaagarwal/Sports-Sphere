@@ -139,21 +139,7 @@ body{
   display: block;
 }
 
-/* .wrapper .main_container{
-  width: (100% - 200px);
-  margin-top: 70px;
-  margin-left: 200px;
-  padding: 15px;
-  transition: all 0.3s ease;
-}
 
-.wrapper .main_container .item{
-  background: #fff;
-  margin-bottom: 10px;
-  padding: 15px;
-  font-size: 14px;
-  line-height: 22px;
-} */
 
 .wrapper.collapse .sidebar{
   width: 70px;
@@ -179,14 +165,15 @@ body{
 
 /* sports news section starts */
 .sports-news{
-    background-color: #92a6e2;
+    background-color: #b3bddf;
     border-radius: 5px;
-    border: 1px solid #d1d1d1;
+    /* border: 1px solid #d1d1d1; */
     width: 25%;
     max-height: auto;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    /* margin-right: 20px; */
     position:absolute;
-    right: 10px;
+    right: 30px;
     padding: 30px 10px;
     z-index: 0;
 }
@@ -214,7 +201,7 @@ body{
 .posts-container{
     width: 50%;
     background-color: #d9e0f1;
-    position: absolute;
+    /* position: absolute; */
     margin-left: 250px;
     margin-top: 100px;
     padding: 20px;
@@ -232,14 +219,15 @@ body{
     margin-left: 20px;
 }
 .posts-row1 input{
-    height: 40px;
+  /* background-color: aqua; */
+    height: 50px;
     width: 80%;
     margin-left: 30px;
     outline: none;
     border: none;
-    border-radius: 30px;
-    font-size: 18px;
-    padding: 30px;
+    border-radius: 30px; 
+     font-size: 18px;
+    padding: 20px;
     text-align: center;
     
     
@@ -262,9 +250,9 @@ body{
 .new-post-section{
     background-color: #dde1ec;
     width: 50%;
-    position: absolute;
+    /* position: absolute; */
     margin-left: 250px;
-    margin-top: 300px;
+    margin-top: 20px;
     padding: 40px;
 }
 .name-user{
