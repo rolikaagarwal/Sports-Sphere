@@ -38,6 +38,8 @@ const sendOTP=()=>{
         console.log(data)
         clientid = data.result.data.client_id;
         console.log(clientid)
+      }else{
+        alert("incorrect adhar number")
       }
     })
     .catch((error) => {
@@ -67,6 +69,8 @@ const submitOTP = ()=>{
       if(data.result.status_code==200){
         signup();
         window.location.href = "/";
+      }else{
+        alert("incorrect OTP");
       }
     })
     .catch((error) => {
