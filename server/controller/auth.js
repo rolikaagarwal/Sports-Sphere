@@ -56,3 +56,22 @@ exports.loginUser = (req, res) => {
       });
     });
 };
+
+exports.getUser = (req,res)=>{
+  const authHeader = req.get('Authorization');
+  const token = authHeader.split('Bearer ')[1];
+  const userID = jwt.verify(token, process.env.SECRET);
+  console.log(userID)
+  model.User.findById(userID.id)
+  .then(foundUser => {
+    if (!foundUser) {
+      res.status(404).json({ message: 'User not found' });
+    } else {
+      res.status(200).json(foundUser);
+    }
+  })
+  .catch(error => {
+    console.log(error);
+    res.status(500).json({ message: 'Internal server error' });
+  });
+}
