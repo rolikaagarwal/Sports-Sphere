@@ -102,7 +102,9 @@ const createPost = () => {
   })
     .then((response) => response.json())
     .then((data) => {
+      document.getElementById("inputCaption").value= "";
         getPosts();
+
   
     })
     .catch((error) => {
