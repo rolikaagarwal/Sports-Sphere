@@ -5,6 +5,7 @@ const cors = require("cors");
 const posts = require("./router/post");
 const users = require("./router/user");
 const authRouter = require("./router/auth");
+const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
@@ -21,7 +22,9 @@ mongoose.connect(process.env.MONGODB).then(()=>{
 
 app.use("/posts",auth,posts.router);
 app.use("/users",auth,users.router);
+app.use("/news",news.router);
 app.use("/auth",authRouter.router);
+
 
 app.get("/",(req,res)=>{
   res.send("Server Running")
