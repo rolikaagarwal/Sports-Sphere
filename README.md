@@ -24,7 +24,7 @@ The project would be a social network platform for sports fans to connect, share
 
 - Clone the Forked Repository to your local machine.
 	```
-	git clone https://github.com/<YOUR_GITHUB_USER_NAME>/STREE-RIDES.git.
+	git clone https://github.com/<YOUR_GITHUB_USER_NAME>/Sports-Sphere.git.
 	```
 - Install dependancy
    ```bash
