@@ -11,7 +11,7 @@ const auth = require("./middleware/auth").auth;
 
 const app = express();
 const corsOptions = {
-  origin: '-'
+  origin: '*'
 };
 
 app.use(cors(corsOptions));
