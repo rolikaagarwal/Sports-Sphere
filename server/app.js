@@ -11,7 +11,7 @@ const auth = require("./middleware/auth").auth;
 
 const app = express();
 const corsOptions = {
-  origin: 'https://sports-sphere.netlify.app/'
+  origin: '-'
 };
 
 app.use(cors(corsOptions));
