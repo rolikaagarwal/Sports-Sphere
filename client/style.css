@@ -299,7 +299,7 @@ body{
 .name-user p{
     margin-left: 20px;
     /* background-color: aqua; */
-    display: flex;
+    /* display: flex; */
     text-align: left;
     align-items: center;
     font-size: 12px;
@@ -328,6 +328,14 @@ body{
     padding: 20px;
     font-size: 14px;
 }
+.likes{
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 800;
+}
+.likes i{
+  padding-left: 5px;
+}
 .new-post-section h5 i{
     padding-right: 10px;
     color: red;
@@ -337,6 +345,7 @@ body{
     /* background-color: azure; */
     justify-content: space-around;
     font-size:  16px;
+    cursor: pointer;
 }
 .post-last-row i{
     padding-right: 5px;

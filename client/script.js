@@ -6,6 +6,7 @@ hamburger.addEventListener("click", function () {
   wrapper.classList.toggle("collapse");
 });
 
+
 const notify = () => {
   alert("Sure! You will be nofied");
 };
@@ -30,32 +31,48 @@ const getPosts = () => {
       console.log(data);
       data.reverse().forEach((post) => {
         document.querySelector(".postcontainer").innerHTML += `<div class="new-post-section">
-        <div class="name-user">
+          <div class="name-user">
             <img src="/img/user.jpg" alt="">
             <p> ${post.userId.firstName}  <br> Basketball Player <br> 300 followers</p>
-        </div>
-        <div class="post-text">
+          </div>
+          <div class="post-text">
             <p>${post.caption} </p>
-        </div>
-        <div class="post-image">
+          </div>
+          <div class="post-image">
             <img src="/img/post1.jpg" alt="">
-        </div>
-        <h5><i class="fa-solid fa-heart"></i>1000 likes</h5>
-        <div class="post-last-row">
-            <h4><i class="fa-solid fa-thumbs-up"></i>Like</h4>
+          </div>
+          <p class="likes">0 Likes<i class="fa-solid fa-heart"></i></p>
+          <div class="post-last-row">
+            <h4 class="likeButton"><i class="fa-solid fa-thumbs-up"></i>Like</h4>
             <h4><i class="fa-solid fa-comment"></i>Comment</h4>
             <h4><i class="fa-solid fa-arrow-up-right-from-square"></i>Repost</h4>
             <h4><i class="fa-solid fa-share"></i>Send</h4>
+          </div>
         </div>
-    </div>
         `;
+      });
+
+      // Select all likeButton elements
+      const likeButtons = document.querySelectorAll(".likeButton");
+
+      // Loop through the likeButtons NodeList and attach an event listener to each element
+      likeButtons.forEach((likeButton) => {
+        likeButton.addEventListener('click', function(){
+          const likes = likeButton.parentNode.parentNode.querySelector('.likes');
+          let currentLikes = parseInt(likes.innerText);
+          console.log(currentLikes);
+          currentLikes++;
+          likes.innerText = currentLikes  + " likes  🖤";
+        });
       });
     })
     .catch((error) => {
-      console.error("Error:", error);
+      console.error(error);
     });
-}; 
+};
+
 getPosts();
+
 // sports news
 
 const newsSection = () => {
@@ -112,6 +129,34 @@ const createPost = () => {
     });
 };
 
+const likeButton=document.querySelector(".likeButton");
+likeButton.addEventListener('click', function(){
+  const likes = document.querySelector('.likes');
+  let currentLikes = parseInt(likes.innerHTML);
+  console.log(currentLikes)
+  currentLikes++;
+  likes.innerText = currentLikes  + " likes  🖤";
+})
+
+
+
+// add likes 
+// function addlikes(){
+//   const likeButton = document.querySelector('.likeButton');
+
+
+// let currentLikes = parseInt(likes.innerText);
+
+// console.log(currentLikes)
+// likeButton.addEventListener('click', function() {
+//   // console.log("clicked");
+//   currentLikes++;
+//   // console.log(currentLikes)
+//   likes.innerText = currentLikes  + " likes  🖤";
+// });
+   
+// }
+// addlikes();
 
 
 

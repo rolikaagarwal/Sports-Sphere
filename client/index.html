@@ -16,7 +16,7 @@
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${cookieValue}`,
+          Authorization: `Bearer ${cookie}`,
         },
       })
         .then((response) => {
@@ -131,9 +131,9 @@
         <div class="new-post-section">
             <div class="name-user">
                 <img src="/img/user.jpg" alt="">
-                <p><b> Rolika Agarwal  </b> </p>
-                 <p>Basketball Player</p>   
-                   <p>300 followers</p> 
+                <p><b>Rolika Agarwal </b>   <br>
+                 Basketball Player   <br>
+                   300 followers</p> 
             </div>
             <div class="post-text">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae, ea optio architecto quis dolorem pariatur eveniet fugiat? Dolorem exercitationem placeat quod eius reiciendis provident temporibus harum sit optio aliquam. </p>
@@ -141,9 +141,10 @@
             <div class="post-image">
                 <img src="/img/post1.jpg" alt="">
             </div>
-            <h5><i class="fa-solid fa-heart"></i>1000 likes</h5>
+            <p class="likes">0 Likes<i class="fa-solid fa-heart"></i></p>
+            <!-- <h5 class="likes"><i class="fa-solid fa-heart"></i>0 likes</h5> -->
             <div class="post-last-row">
-                <h4><i class="fa-solid fa-thumbs-up"></i>Like</h4>
+              <h4 class="likeButton"><i class="fa-solid fa-thumbs-up"></i>Like</h4>
                 <h4><i class="fa-solid fa-comment"></i>Comment</h4>
                 <h4><i class="fa-solid fa-arrow-up-right-from-square"></i>Repost</h4>
                 <h4><i class="fa-solid fa-share"></i>Send</h4>
