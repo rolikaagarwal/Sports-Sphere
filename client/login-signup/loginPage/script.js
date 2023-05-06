@@ -5,7 +5,7 @@ const login = () => {
     console.log(loginemail, loginpass);
 
 
-    fetch("https://sports-sphere.vercel.app/auth/login", {
+    fetch("https://sports-sphere.onrender.com/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
