@@ -85,7 +85,7 @@ const submitOTP = ()=>{
 
 
 const signup = () => {
-  fetch("https://sports-sphere.vercel.app/auth/signup", {
+  fetch("https://sports-sphere.onrender.com/auth/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
