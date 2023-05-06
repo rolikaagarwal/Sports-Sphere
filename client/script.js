@@ -7,6 +7,7 @@ hamburger.addEventListener("click", function () {
 });
 
 
+
 const notify = () => {
   alert("Sure! You will be nofied");
 };
@@ -39,7 +40,7 @@ const getPosts = () => {
             <p>${post.caption} </p>
           </div>
           <div class="post-image">
-            <img src="/img/post1.jpg" alt="">
+            <img src="${post.imgURL}" alt="">
           </div>
           <p class="likes">0 Likes<i class="fa-solid fa-heart"></i></p>
           <div class="post-last-row">
@@ -104,30 +105,59 @@ newsSection();
 const createPost = () => {
   const inputCaption = document.getElementById("inputCaption").value;
   console.log(inputCaption);
-  fetch(baseUrl + "/posts", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${cookieValue}`,
-    },
 
-    body: JSON.stringify({
-      caption: inputCaption,
-      
-      
-  })
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("inputCaption").value= "";
-        getPosts();
-
-  
+  generateImage(inputCaption)
+    .then((imgURL) => {
+      fetch(baseUrl + "/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookieValue}`,
+        },
+        body: JSON.stringify({
+          caption: inputCaption,
+          imgURL: imgURL,
+          
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(imgURL)
+          document.getElementById("inputCaption").value = "";
+          getPosts();
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 };
+
+const generateImage = (caption) => {
+  return fetch("https://api.openai.com/v1/images/generations", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer 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",
+    },
+    body: JSON.stringify({
+      prompt: caption,
+      n: 1,
+      size: "512x512",
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.data[0].url);
+      return data.data[0].url;
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
+
 
 const likeButton=document.querySelector(".likeButton");
 likeButton.addEventListener('click', function(){
