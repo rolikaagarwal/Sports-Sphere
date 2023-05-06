@@ -48,3 +48,7 @@ The project would be a social network platform for sports fans to connect, share
   Open index.html file in Client and start Live Server
 ## Demo
  
+
+https://user-images.githubusercontent.com/115306535/236619952-27b0dcb1-2674-4a23-baa7-a2086aab0869.mp4
+
+
