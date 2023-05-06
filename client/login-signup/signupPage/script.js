@@ -1,10 +1,15 @@
 
-let user;
+let user={
+  firstName: String,
+  email: String,
+  password:String,
+  contact:String
+};
 const verify = ()=>{
-  user.fullname = document.getElementById("fullname").value;
-  user.username = document.getElementById("username").value;
-  user.mobile = document.getElementById("mobile").value;
-  user.pass = document.getElementById("pass").value;
+  user.firstName = document.getElementById("fullname").value;
+  user.email = document.getElementById("username").value;
+  user.contact = document.getElementById("mobile").value;
+  user.password = document.getElementById("pass").value;
 
   
 
@@ -19,13 +24,13 @@ const sendOTP=()=>{
   document.querySelector(".submitOTP").style.display="inline-block";
 
   const adhaar = document.querySelector("#adhaar").value;
-
+  console.log(adhaar)
   fetch("https://api.emptra.com/aadhaarVerification/requestOtp", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "secretKey": "R84q1Vjx13I1MCM640D22jMLbmm5yMqEt6mEBLOgklpv7w1KjlPPyoTTwMVNEA5ef",
-      "clientId": "671bb34f4d68fee50be35ce26393090a:92dfdfe6baf7bef36251c054c8460ea7"
+      secretKey: "tYGNpbvi3V9JZ9G5oKsmpSCElBYe3fyKwIWDKkNKbF5DP6gFhosgFhhANBsdZlSd5",
+      clientId: "c206482246552ada15086181162a097f:07ae1c738a2668d057dc9bb8c9a97bdf"
     },
     body: JSON.stringify({
       aadhaarNumber : adhaar,
@@ -55,8 +60,8 @@ const submitOTP = ()=>{
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "secretKey": "R84q1Vjx13I1MCM640D22jMLbmm5yMqEt6mEBLOgklpv7w1KjlPPyoTTwMVNEA5ef",
-      "clientId": "671bb34f4d68fee50be35ce26393090a:92dfdfe6baf7bef36251c054c8460ea7"
+      secretKey: "tYGNpbvi3V9JZ9G5oKsmpSCElBYe3fyKwIWDKkNKbF5DP6gFhosgFhhANBsdZlSd5",
+      clientId: "c206482246552ada15086181162a097f:07ae1c738a2668d057dc9bb8c9a97bdf"
     },
     body: JSON.stringify({
       client_id: clientid,
