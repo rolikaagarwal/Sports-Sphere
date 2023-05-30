@@ -51,4 +51,10 @@ The project would be a social network platform for sports fans to connect, share
 
 https://user-images.githubusercontent.com/115306535/236619952-27b0dcb1-2674-4a23-baa7-a2086aab0869.mp4
 
+## What I learned- 
 
+- Creating APIs: I learned how to develop APIs, which are endpoints that handle requests and provide data or perform actions for my website.
+
+- Integrating APIs in Frontend: I gained the ability to connect my frontend code with the APIs I created. This allowed me to fetch data from the backend and update my website's user interface accordingly.
+
+- User Authentication with JWT Tokens: I implemented user authentication using JWT tokens, which helped secure my website. This involved managing user registration, login, and logout processes, as well as generating and validating tokens for authorized access.
