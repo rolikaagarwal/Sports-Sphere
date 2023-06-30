@@ -10,9 +10,6 @@ const verify = ()=>{
   user.email = document.getElementById("username").value;
   user.contact = document.getElementById("mobile").value;
   user.password = document.getElementById("pass").value;
-
-  
-
   // Navigate to the verification page
   window.location.href = "./verification.html";
 }
@@ -85,7 +82,7 @@ const submitOTP = ()=>{
 
 
 const signup = () => {
-  fetch("https://sports-sphere.onrender.com/auth/signup", {
+  fetch("http://localhost:3000/auth/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

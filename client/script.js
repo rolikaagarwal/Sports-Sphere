@@ -1,6 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const wrapper = document.querySelector(".wrapper");
-const baseUrl = "https://sports-sphere.vercel.app";
+const baseUrl = "http://localhost:3000";
 
 hamburger.addEventListener("click", function () {
   wrapper.classList.toggle("collapse");
@@ -140,7 +140,7 @@ const generateImage = (caption) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
     body: JSON.stringify({
       prompt: caption,
@@ -150,6 +150,7 @@ const generateImage = (caption) => {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       console.log(data.data[0].url);
       return data.data[0].url;
     })

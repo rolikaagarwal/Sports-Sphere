@@ -6,27 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sports website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
    <script>
-    const cookie = localStorage.getItem("cookieName");
-    console.log(cookie);
-    fetch("https://sports-sphere.vercel.app/auth", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${cookie}`,
-        },
-      })
-        .then((response) => {
-          if(response.status!=200){
-            window.location.href="/login-signup/loginPage";
-          }
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
+      const token = localStorage.getItem('cookieName');
+      if(!token) {
+        window.location.href='./login-signup/loginPage';
+      }
+      console.log(token)
    </script>
 
     <div class="wrapper">
@@ -67,31 +55,19 @@
             </a>
           </li>
           <li>
-            <a href="/events/index.html">
+            <a href="./events/index.html">
               <span class="icon"><i class="fas fa-file-video"></i></span>
               <span class="title"> Events</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
-              <span class="title">Sports</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" class="active">
+            <a href="./index.html" class="active">
               <span class="icon"><i class="fas fa-blog"></i></span>
               <span class="title">Trending</span>
             </a>
           </li>
           <li>
-            <a href="#">
-              <span class="icon"><i class="fas fa-leaf"></i></span>
-              <span class="title">Live Games</span>
-            </a>
-          </li>
-          <li>
-            <a href="chatForum/index.html">
+            <a href="./chatForum/index.html">
               <span class="icon"><i class="fas fa-leaf"></i></span>
               <span class="title">Chat Forum</span>
             </a>
@@ -113,7 +89,7 @@
     <section>
         <div class="posts-container">
             <div class="posts-row1">
-                <img src="/img/user.jpg" alt="user">
+                <img src="./img/user.jpg" alt="user">
                 <input type="text" placeholder="Write Here" id="inputCaption">
             </div>
             <div class="posts-row2">
@@ -130,7 +106,7 @@
     <section class="postcontainer">
         <div class="new-post-section">
             <div class="name-user">
-                <img src="/img/user.jpg" alt="">
+                <img src="./img/user.jpg" alt="">
                 <p><b>Rolika Agarwal </b>   <br>
                  Basketball Player   <br>
                    300 followers</p> 
@@ -139,7 +115,7 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis recusandae, ea optio architecto quis dolorem pariatur eveniet fugiat? Dolorem exercitationem placeat quod eius reiciendis provident temporibus harum sit optio aliquam. </p>
             </div>
             <div class="post-image">
-                <img src="/img/post1.jpg" alt="">
+                <img src="./img/post1.jpg" alt="">
             </div>
             <p class="likes">0 Likes<i class="fa-solid fa-heart"></i></p>
             <!-- <h5 class="likes"><i class="fa-solid fa-heart"></i>0 likes</h5> -->
@@ -154,19 +130,6 @@
 
     </section>
     <!-- new posts section ends -->
-
-
-   
-
-
-
-
-
-
-
-
-
-
 
    <script src="script.js"></script>
   </body>
