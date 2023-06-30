@@ -141,7 +141,7 @@ const generateImage = (caption) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
     body: JSON.stringify({
       prompt: caption,
