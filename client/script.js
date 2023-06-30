@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const wrapper = document.querySelector(".wrapper");
-const baseUrl = "http://localhost:3000";
+// const baseUrl = "http://localhost:3000";
+const baseUrl = "https://sports-sphere.vercel.app";
 
 hamburger.addEventListener("click", function () {
   wrapper.classList.toggle("collapse");

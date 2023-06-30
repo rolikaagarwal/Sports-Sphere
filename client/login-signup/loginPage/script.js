@@ -2,8 +2,11 @@ const login = () => {
   const loginemail = document.getElementById("loginemail").value;
   const loginpass = document.getElementById("loginpass").value;
   console.log(loginemail, loginpass);
+  const baseURL = "https://sports-sphere.vercel.app";
+  // const baseURL = "http://localhost:3000";
 
-  fetch("http://localhost:3000/auth/login", {
+
+  fetch(`${baseURL}/auth/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

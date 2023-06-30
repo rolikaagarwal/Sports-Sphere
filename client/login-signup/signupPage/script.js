@@ -80,9 +80,10 @@ const submitOTP = ()=>{
     });
 }
 
-
+// const baseURL = "http://localhost:3000";
+const baseURL = "https://sports-sphere.vercel.app";
 const signup = () => {
-  fetch("http://localhost:3000/auth/signup", {
+  fetch(`${baseURL}/auth/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
