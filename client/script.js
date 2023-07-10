@@ -141,7 +141,7 @@ const generateImage = (caption) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
     body: JSON.stringify({
       prompt: caption,
@@ -190,5 +190,8 @@ likeButton.addEventListener('click', function(){
 // }
 // addlikes();
 
-
+const logout = ()=>{
+  localStorage.removeItem("cookieName");
+  window.location.href='./login-signup/loginPage'
+}
 
