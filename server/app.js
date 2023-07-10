@@ -10,11 +10,8 @@ const news = require("./router/news");
 const auth = require("./middleware/auth").auth;
 
 const app = express();
-const corsOptions = {
-  origin: '-'
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 const http = require('http').createServer(app)
 const io = require('socket.io')(http, {
   cors: {

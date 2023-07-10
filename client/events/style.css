@@ -168,14 +168,14 @@ body{
 }
 .event-container{
   background-color: #cfdaf3;
-  width: 30%;
+  width: 50%;
   margin-left: 250px;
   margin-top: 80px;
   display: flex;
 }
 .date{
   /* background-color: blue; */
-  width:15%;
+  width:50%;
   padding: 20px;
   text-align: center;
   vertical-align: middle;

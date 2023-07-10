@@ -10,9 +10,6 @@ const verify = ()=>{
   user.email = document.getElementById("username").value;
   user.contact = document.getElementById("mobile").value;
   user.password = document.getElementById("pass").value;
-
-  
-
   // Navigate to the verification page
   window.location.href = "./verification.html";
 }
@@ -83,9 +80,10 @@ const submitOTP = ()=>{
     });
 }
 
-
+// const baseURL = "http://localhost:3000";
+const baseURL = "https://sports-sphere.vercel.app";
 const signup = () => {
-  fetch("https://sports-sphere.onrender.com/auth/signup", {
+  fetch(`${baseURL}/auth/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

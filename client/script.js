@@ -1,5 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const wrapper = document.querySelector(".wrapper");
+// const baseUrl = "http://localhost:3000";
 const baseUrl = "https://sports-sphere.vercel.app";
 
 hamburger.addEventListener("click", function () {
@@ -140,7 +141,7 @@ const generateImage = (caption) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: "Bearer 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",
     },
     body: JSON.stringify({
       prompt: caption,
@@ -150,6 +151,7 @@ const generateImage = (caption) => {
   })
     .then((response) => response.json())
     .then((data) => {
+      console.log(data)
       console.log(data.data[0].url);
       return data.data[0].url;
     })
@@ -188,5 +190,8 @@ likeButton.addEventListener('click', function(){
 // }
 // addlikes();
 
-
+const logout = ()=>{
+  localStorage.removeItem("cookieName");
+  window.location.href='./login-signup/loginPage'
+}
 

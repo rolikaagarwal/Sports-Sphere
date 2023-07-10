@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
     <div class="box-form">
-        <div class="left">
-            <div class="overlay">
-                <h1>Hello World</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur et est sed felis aliquet sollicitudin</p>
-                <span>
-                    <p>login with social media</p>
-                    <a href="/login" style="text-decoration: none;"><i class="fa-solid fa-user"></i> Log in</a>
-                    <a href="/auth/google" style="text-decoration: none;"><i class="fa-brands fa-google fa-sm" ></i> Login with Google</a>
-    
-                </span>
-            </div>
+      <div class="left">
+        <div class="overlay">
+          <h1>Hello World</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+            et est sed felis aliquet sollicitudin
+          </p>
+          <span>
+            <p>login with social media</p>
+            <a href="../loginPage" style="text-decoration: none"
+              ><i class="fa-solid fa-user"></i> Log in</a
+            >
+          </span>
         </div>
-    
-    
-        <div class="right">
-            <br><br>
-            <h5>Verify</h5>
-            <br><br><br>
-            <p>Have an account? <a href="/login">Log in to Your Account</a> it takes less than a minute</p>
-            <div class="inputs">
-                    <input type="text" placeholder="Enter Your Adhaar Number" id="adhaar">
-                    <br><br><br>
-                    <button type="submit" onclick="sendOTP()" class="sendOTP">Send OTP</button>
+      </div>
 
+      <div class="right">
+        <br /><br />
+        <h5>Verify</h5>
+        <br /><br /><br />
+        <p>
+          Have an account? <a href="../loginPage/">Log in to Your Account</a> it takes
+          less than a minute
+        </p>
+        <div class="inputs">
+          <input
+            type="text"
+            placeholder="Enter Your Adhaar Number"
+            id="adhaar"
+          />
+          <br /><br /><br />
+          <button type="submit" onclick="sendOTP()" class="sendOTP">
+            Send OTP
+          </button>
 
-                    <input type="text" placeholder="####" class="otp">
-                    <br><br>
-                    <button type="submit"  onclick="submitOTP()" class="submitOTP" style="display: none;">Submit OTP</button>
-            </div>
+          <input type="text" placeholder="####" class="otp" />
+          <br /><br />
+          <button
+            type="submit"
+            onclick="submitOTP()"
+            class="submitOTP"
+            style="display: none"
+          >
+            Submit OTP
+          </button>
         </div>
-    
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
